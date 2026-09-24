@@ -1,0 +1,33 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 200px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+}
+
+.case {
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  gap: 20px;
+}
+
+.zone {
+  flex: 1;
+}
+
+img {
+  display: block;
+  margin: auto;
+  margin: auto auto 0;
+  width: 750px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alien Translator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Alien Translator</h1>
+
+  <main>
+    <div class="zone">
+      <label for="texte">Texte humain</label>
+      <textarea id="texte" placeholder="Écris ici..."></textarea>
+      <button id="copier-texte">Copier</button>
+    </div>
+
+    <div class="zone">
+      <label for="alien">Code alien</label>
+      <textarea id="alien" placeholder="⏃⌰⟟⟒⋏"></textarea>
+      <button id="copier-alien">Copier</button>
+    </div>
+  </main>
+
+  <button id="effacer">Effacer</button>
+
+  <section>
+    <h2>Alphabet</h2>
+    <div id="alphabet"></div>
+  </section>
+
+  <img src="img-alien.png" alt="Alien">
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
