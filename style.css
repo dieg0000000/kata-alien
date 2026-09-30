@@ -38,7 +38,6 @@ textarea {
 
 textarea:focus {
   outline: 2px solid #7ee787;
-  border-color: transparent;
 }
 
 button {
