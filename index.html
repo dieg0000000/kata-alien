@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traducteur Alien</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <h1>Traducteur Alien</h1>
 
-    <label for="entree">Texte :</label><br>
-    <textarea id="entree" rows="5" cols="50"></textarea><br>
+    <label for="entree">Texte :</label>
+    <textarea id="entree" rows="5" cols="50"></textarea>
 
     <button onclick="sortie.value = encoder(entree.value)">Encoder</button>
-    <button onclick="sortie.value = decoder(entree.value)">Décoder</button><br>
+    <button onclick="sortie.value = decoder(entree.value)">Décoder</button>
 
-    <label for="sortie">Résultat :</label><br>
+    <label for="sortie">Résultat :</label>
     <textarea id="sortie" rows="5" cols="50" readonly></textarea>
 
     <button id="copier-texte">Copier</button>
