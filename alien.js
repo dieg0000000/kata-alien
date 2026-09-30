@@ -28,18 +28,34 @@ function encoder(texte) { return Array.from(texte, (caractere) => ALPHABET[carac
 
 function decoder(code) { return Array.from(code, (symbole) => INVERSE[symbole] ?? symbole).join('');}
 
-const [mode, ...mots] = process.argv.slice(2);
-const texte = mots.join(' ');
-
-if (mode === 'encoder') 
+function copier(zone, bouton) 
   {
-    console.log(encoder(texte));
-  } 
-else if (mode === 'decoder') 
-  {
-    console.log(decoder(texte));
-  } 
-else 
-  {
-
+    navigator.clipboard.writeText(zone.value);
+    bouton.textContent = 'Copié !';
+    setTimeout(() => (bouton.textContent = 'Copier'), 1500);
   }
+
+if (typeof process !== 'undefined') {
+  const [mode, ...mots] = process.argv.slice(2);
+  const texte = mots.join(' ');
+
+  if (mode === 'encoder') 
+    {
+      console.log(encoder(texte));
+    } 
+  else if (mode === 'decoder') 
+    {
+      console.log(decoder(texte));
+    } 
+  else 
+    {
+
+    }
+}
+
+if (typeof document !== 'undefined') {
+  const boutonCopierTexte = document.getElementById('copier-texte');
+  const zoneSortie = document.getElementById('sortie');
+
+  boutonCopierTexte.addEventListener('click', () => copier(zoneSortie, boutonCopierTexte));
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traducteur Alien</title>
+  </head>
+  <body>
+    <h1>Traducteur Alien</h1>
+
+    <label for="entree">Texte :</label><br>
+    <textarea id="entree" rows="5" cols="50"></textarea><br>
+
+    <button onclick="sortie.value = encoder(entree.value)">Encoder</button>
+    <button onclick="sortie.value = decoder(entree.value)">Décoder</button><br>
+
+    <label for="sortie">Résultat :</label><br>
+    <textarea id="sortie" rows="5" cols="50" readonly></textarea>
+
+    <button id="copier-texte">Copier</button>
+
+    <script src="alien.js"></script>
+  </body>
+</html>
